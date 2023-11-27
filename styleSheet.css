@@ -1,0 +1,114 @@
+body {
+    font-family: 'Raleway', cursive;
+    background-color: #506971;
+    color: #d0c2b6;
+}
+
+.banner {
+    background: linear-gradient(#506971, #000000);
+    width: 100%;
+    height: 130px;
+    
+     
+
+}
+
+.banner_content {
+    max-width: 1300px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.banner_text {
+    font-size: 25px;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+#home_button { 
+    border: solid 5px #000000;
+    height: 120px;
+    float: left;
+}
+
+
+
+.about_image {
+    width: 350px;
+    height: 900px;
+    object-fit: cover;
+    object-position: 100% 0 ;
+    float: right;
+}
+
+.projects_image {
+    width: 400px;
+    float: left;
+}
+
+.home_image {
+    position: absolute;
+    width: 100%;
+    max-width: 1300px;
+    height: 832px;
+    object-fit: cover;
+    object-position: 0 0;
+}
+
+#title {
+    font-size: 80px;
+    display: flex;
+    justify-content: right;
+    position: relative;
+    margin: 0 40px 620px auto;
+    z-index: 1;
+}
+
+#coming_soon {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+#coming_soon_text {
+    font-size: 65px;
+    text-align: center;
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 5px;
+    border-image-source: linear-gradient(to left, #506971, #000000, #506971);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+}
+
+.upcoming_show_banner {
+    width: 1100px;
+    border: solid #000000 5px;
+    border-radius: 50px;
+    margin: 0 0 20px 0;
+}
+
+#buy_button {
+    text-align: center;
+    background-color: #d0c2b6;
+    border-radius: 25px;
+    font-size: 45px;
+    border: solid #d0c2b6;
+    padding: 10px;
+    margin: 0 0 50px 0;
+}
+
+a:link { text-decoration: none; color: #d0c2b6; }
+
+
+a:visited { text-decoration: none; color: #d0c2b6; }
+
+
+a:hover { text-decoration: none; color: #d0c2b6; }
+
+
+a:active { text-decoration: none; color: #d0c2b6; }
