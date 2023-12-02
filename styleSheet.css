@@ -5,7 +5,7 @@ body {
 }
 
 .banner {
-    background: linear-gradient(#506971, #000000);
+    background: linear-gradient(#506971, #72878d);
     width: 100%;
     height: 130px;
     
@@ -28,9 +28,9 @@ body {
     align-items: center;
 }
 
-#home_button { 
-    border: solid 5px #000000;
-    height: 120px;
+#logoImage { 
+    
+    height: 130px;
     float: left;
 }
 
@@ -68,12 +68,36 @@ grid-area: secondAbout;
     justify-content: space-between;
 }
 
+.projectBanner {
+    background-color: #000000;
+    height: 425px;
+    width: 100%;
+    display: grid;
+    flex-direction: row;
+    grid-template-rows: 150px 150px 150px;
+    grid-template-areas:
+        "titleProject titleProject projPhoto"
+        "projectSubtitle . projPhoto"
+        ". . projPhoto"
+}
+
+.titleProject {
+    font-size: 80px;
+    position: relative;
+    margin: 35px auto 0 75px;
+    grid-area: titleProject;
+}
+
 .projects_image {
-    width: 415px;
-    height: 1200px;
-    object-fit: cover;
-    object-position: 0 100%;
+    height: 425px;
+    margin: -25px 85px 0 0;
     grid-area: projPhoto;
+}
+
+.projectSubtitle {
+    color: #d0c2b6;
+    margin: 35px auto 0 75px;
+    grid-area: projectSubtitle;
 }
 
 .projTextOne {
@@ -93,19 +117,22 @@ grid-area: secondAbout;
     object-position: 0 0;
 }
 
-#title {
+.titleFont {
+    font-family: 'Marcellus', serif;
+}
+
+.title {
     font-size: 80px;
     display: flex;
     justify-content: right;
     position: relative;
-    margin: 0 40px 620px auto;
+    margin: 0 40px 750px auto;
     z-index: 1;
 }
 
 #come_see {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
 }
 
 #come_see_text {
@@ -121,10 +148,16 @@ grid-area: secondAbout;
 }
 
 .upcoming_show_banner {
-    width: 1100px;
+    width: 800px;
     border: solid #000000 5px;
     border-radius: 50px;
-    margin: 0 0 20px 0;
+    margin: 0 25px 0 25px;
+}
+
+.upcoming_show_sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
 }
 
 #tickets_button {
@@ -134,7 +167,6 @@ grid-area: secondAbout;
     border: solid;
     border-color: #000000;
     padding: 10px;
-    margin: 0 0 50px 0;
 }
 
 a:link { text-decoration: none; color: #d0c2b6; }
@@ -148,33 +180,76 @@ a:hover { text-decoration: none; color: #d0c2b6; }
 
 a:active { text-decoration: none; color: #d0c2b6; }
 
+
+
+.workshopBanner {
+    background-color: #000000;
+    height: 575px;
+    width: 100%;
+    display: grid;
+    flex-direction: row;
+    grid-template-rows: 225px 150px 150px;
+    grid-template-areas:
+        "workshopImage workshopTitle workshopTitle"
+        "workshopImage synopsis ."
+        "workshopImage . button"
+    
+}
+
+.workshop_image {
+    width: 500px;
+    height: 575px;
+    object-fit: cover;
+    object-position: 100% 0;
+    grid-area: workshopImage;
+}
+
+.titleWorkshop {
+    font-size: 80px;
+    position: relative;
+    margin: 35px 40px 750px auto;
+    grid-area: workshopTitle;
+}
+
+.workshopSynopsis{
+    color: #d0c2b6;
+    grid-area: synopsis;
+}
+
+.buttonSpacing {
+    justify-self: right;
+    align-self: center;
+    grid-area: button;
+}
+
+#workshopButton {
+    background-color: #d0c2b6;
+    border-radius: 25px;
+    font-size: 25px;
+    border: solid;
+    padding: 15px 45px 15px 45px;
+    margin: 0 45px 0 0;
+}
+
+
+
+
 .workshopMain {
     display: grid;
-    grid-gap: 5px;
+    grid-gap: 30px;
     grid-template-areas:
-        "workshopTitle workshopTitle workshopPhoto"
-        "workshopTimes button workshopPhoto"
-        "workshopDates button workshopPhoto"
-        "firstD secondD workshopPhoto"
-        "thirdD fourthD workshopPhoto";
-    grid-template-rows: 85px 35px 55px 1fr 2fr;
+        "workshopTitle workshopTitle "
+        "workshopDates button "
+        "firstD secondD "
+        "thirdD fourthD "
+        ". . ";
+    grid-template-rows: auto auto 1fr 1fr 1fr;
     justify-content: space-between;
     justify-items: center;
     align-items: top;
 }
-.workshop_image {
-    width: 350px;
-    height: 900px;
-    object-fit: cover;
-    object-position: 100% 0 ;
-    grid-area: workshopPhoto;
-}
-
 .workshopTitle {
-    grid-area: workshopTitle;
-}
-.workshopTimes {
-    grid-area: workshopTimes;
+    grid-area: workshop Title;
 }
 .workshopDates {
     grid-area: workshopDates;
@@ -191,26 +266,24 @@ a:active { text-decoration: none; color: #d0c2b6; }
     grid-area: thirdD;
 }
 .fourthDay {
-    justify-self: left;
     grid-area: fourthD;
 }
 
-.buttonSpacing {
-    align-self: center;
-    grid-area: button;
-}
 
-#workshopButton {
-    background-color: #d0c2b6;
-    border-radius: 25px;
-    font-size: 35px;
-    border: solid;
-}
 
 .workshopHeader {
-    background: linear-gradient(#506971, #000000);
+    background: #506971;
+    padding: 0 0 5px 15px;
+    margin: 0 15px 15px 15px;
+
 }
 
+.infoBox{
+    background: linear-gradient(#72878d, #3b4d53);
+    color: #d0c2b6;
+    border: solid #000000;
+    border-width:  3px 0 3px 0;
+}
 .resumeName {
     font-size: 45px;
 }
