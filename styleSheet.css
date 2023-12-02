@@ -14,7 +14,6 @@ body {
 }
 
 .banner_content {
-    max-width: 1300px;
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -120,9 +119,10 @@ grid-area: secondAbout;
 .titleFont {
     font-family: 'Marcellus', serif;
 }
-
-.title {
+.titleSize {
     font-size: 80px;
+}
+.title {
     display: flex;
     justify-content: right;
     position: relative;
@@ -131,14 +131,15 @@ grid-area: secondAbout;
 }
 
 #come_see {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-areas: "side banner";
 }
 
 #come_see_text {
+    margin: 0;
     font-size: 65px;
     text-align: center;
-    border: 10px solid;
+    border: solid;
     border-image-slice: 1;
     border-width: 5px;
     border-image-source: linear-gradient(to left, #506971, #000000, #506971);
@@ -152,22 +153,18 @@ grid-area: secondAbout;
     border: solid #000000 5px;
     border-radius: 50px;
     margin: 0 25px 0 25px;
+    grid-area: banner;
 }
 
 .upcoming_show_sidebar {
+    grid-area: side;
     display: flex;
     flex-direction: column;
-    align-items: space-around;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
-#tickets_button {
-    background-color: #d0c2b6;
-    border-radius: 25px;
-    font-size: 45px;
-    border: solid;
-    border-color: #000000;
-    padding: 10px;
-}
+
 
 a:link { text-decoration: none; color: #d0c2b6; }
 
@@ -205,7 +202,6 @@ a:active { text-decoration: none; color: #d0c2b6; }
 }
 
 .titleWorkshop {
-    font-size: 80px;
     position: relative;
     margin: 35px 40px 750px auto;
     grid-area: workshopTitle;
@@ -220,42 +216,30 @@ a:active { text-decoration: none; color: #d0c2b6; }
     justify-self: right;
     align-self: center;
     grid-area: button;
+    margin: 0 45px 0 0;
+
 }
 
-#workshopButton {
+.buttonFormat {
     background-color: #d0c2b6;
-    border-radius: 25px;
     font-size: 25px;
     border: solid;
+    border-radius: 25px;
     padding: 15px 45px 15px 45px;
-    margin: 0 45px 0 0;
 }
-
-
-
 
 .workshopMain {
     display: grid;
     grid-gap: 30px;
     grid-template-areas:
-        "workshopTitle workshopTitle "
-        "workshopDates button "
         "firstD secondD "
         "thirdD fourthD "
         ". . ";
-    grid-template-rows: auto auto 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
     justify-content: space-between;
     justify-items: center;
     align-items: top;
 }
-.workshopTitle {
-    grid-area: workshop Title;
-}
-.workshopDates {
-    grid-area: workshopDates;
-}
-
-
 .firstDay {
     grid-area: firstD;
 }
@@ -269,7 +253,9 @@ a:active { text-decoration: none; color: #d0c2b6; }
     grid-area: fourthD;
 }
 
-
+.workshopText {
+    text-align: center;
+}
 
 .workshopHeader {
     background: #506971;
@@ -292,4 +278,113 @@ a:active { text-decoration: none; color: #d0c2b6; }
     display: grid;
     grid-template-columns: 1fr 1fr;
     text-align: center;
+}
+
+@media only screen and (max-width: 1000px) {
+    .banner_text {
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+    }
+    .home_image {
+        position: absolute;
+        width: 100%;
+        max-width: 1300px;
+        height: 500px;
+        object-fit: cover;
+        object-position: 0 0;
+    }
+
+    .titleSize {
+        font-size: 40px;
+    }
+
+    .title {
+        display: flex;
+        justify-content: right;
+        position: relative;
+        margin: 0 40px 425px auto;
+        z-index: 1;
+    }
+    .titleWorkshop {
+        position: relative;
+        margin: 0 40px 425px auto;
+        grid-area: workshopTitle;
+    }
+    #come_see {
+        display: block;
+        flex-direction: row;
+    }
+    .upcoming_show_banner {
+        width: 100%;
+        display: block;
+        border: solid #000000 2px;
+        border-radius: 50px;
+        margin: 0;
+    }
+    #come_see_text {
+        margin: 10px 0 10px 0;
+        font-size: 30px;
+    }
+    .buttonFormat {
+        font-size: 15px;
+        border-radius: 5px;
+        padding: 5px 20px 5px 20px;
+        margin: 10px 0 10px 0;
+    }
+    .workshopBoxSizing {
+        font-size: 10px;
+    }
+    .workshopHeader {
+        font: 15px;
+    }
+
+}
+@media only screen and (max-width: 600px) {
+    .banner_text {
+        display: inline;
+        margin-top: 30px;
+    }
+    .home_image {
+        position: absolute;
+        width: 100%;
+        max-width: 1300px;
+        height: 400px;
+        object-fit: cover;
+        object-position: 0 0;
+    }
+    .titleSize {
+        font-size: 30px;
+    }
+
+    .title {
+        display: flex;
+        justify-content: right;
+        position: relative;
+        margin: 0 10px 375px auto;
+        z-index: 1;
+    }
+    .titleWorkshop {
+        position: relative;
+        margin: 0 10px 375px auto;
+        grid-area: workshopTitle;
+    }
+    .upcoming_show_banner {
+        max-width: 800px;
+        border: solid #000000 1px;
+        border-radius: 50px;
+        margin: 0 ;
+    }
+    .workshopMain {
+        display: grid;
+        grid-gap: 30px;
+        grid-template-areas:
+            "firstD" "secondD "
+            "thirdD" "fourthD "
+            "."
+        grid-template-rows: auto auto;
+        justify-content: space-between;
+        justify-items: center;
+        align-items: top;
+    }  
 }
