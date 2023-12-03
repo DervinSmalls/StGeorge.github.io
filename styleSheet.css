@@ -21,6 +21,7 @@ body {
 }
 
 .banner_text {
+    text-shadow: 1px 1px 2px black;
     font-size: 25px;
     color: black;
     display: flex;
@@ -33,57 +34,25 @@ body {
     float: left;
 }
 
-.aboutMain {
-    display: grid;
-    grid-template-rows: auto 1fr 10fr;
-    grid-template-areas: "firstAbout photo" "secondAbout photo" "thirdAbout photo";
-    justify-content: space-between;
-    align-items: top;
-}
-
-.about_image {
-    width: 350px;
-    height: 900px;
-    object-fit: cover;
-    object-position: 100% 0 ;
-    grid-area: photo;
-}
-
-.aboutOne {
-    grid-area: firstAbout;
-}
-
-.aboutTwo {
-grid-area: secondAbout;
-}
-
-.aboutThree {
-    grid-area: thirdAbout;
-    }
-
-.projectsMain {
-    display: grid;
-    grid-template-areas: "projPhoto first" "projPhoto second" "projPhoto .";
-    justify-content: space-between;
-}
-
 .projectBanner {
     background-color: #000000;
     height: 425px;
     width: 100%;
     display: grid;
     flex-direction: row;
-    grid-template-rows: 150px 150px 150px;
+    grid-template-rows: 1fr 1fr;
+    align-items: start;
     grid-template-areas:
         "titleProject titleProject projPhoto"
-        "projectSubtitle . projPhoto"
-        ". . projPhoto"
+        "projectSubtitle projectSubtitle projPhoto"
+
 }
 
 .titleProject {
-    font-size: 80px;
+    text-shadow: 1px 1px 2px black;
     position: relative;
     margin: 35px auto 0 75px;
+    grid-template-rows: 325px 100px 100px;
     grid-area: titleProject;
 }
 
@@ -95,16 +64,66 @@ grid-area: secondAbout;
 
 .projectSubtitle {
     color: #d0c2b6;
+    text-shadow: 1px 1px 2px black;
     margin: 35px auto 0 75px;
     grid-area: projectSubtitle;
 }
 
-.projTextOne {
-    grid-area: first;
+.maskFormat {
+    height: 200px;
+    width: 150px;
 }
 
-.projTextTwo {
-    grid-area: second;
+.maskTop {
+    grid-area: maskTop;
+    margin: 20px 20px 0 0;
+
+}
+
+.maskBottom {
+    grid-area: maskBottom;
+    margin: 5px 20px 20px 0;
+
+}
+
+.maskBody {
+    grid-area: maskBody;
+}
+
+.maskTitle {
+    grid-area: maskTitle;
+    margin: auto;
+}
+
+.projectOne {
+    display: grid;
+    grid-template-rows: 125px auto auto auto;
+    grid-template-areas:
+        "maskTop maskTitle"
+        "maskTop maskBody"
+        "maskBottom maskBody"
+        "maskBottom maskBody";
+}
+
+.videoTitle {
+    grid-area: videoTitle;
+}
+
+.videoEmbed {
+    grid-area: videoEmbed;
+    min-width: 80%;
+    height: 500px;
+    margin: auto;
+}
+
+.videoText {
+    grid-area: videoText;
+}
+
+.projectTwo {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
 }
 
 .home_image {
@@ -123,48 +142,51 @@ grid-area: secondAbout;
     font-size: 80px;
 }
 .title {
+    text-shadow: 1px 1px 2px black;
     display: flex;
     justify-content: right;
     position: relative;
-    margin: 0 40px 750px auto;
+    margin: 0 40px 675px auto;
     z-index: 1;
 }
 
-#come_see {
-    display: grid;
-    grid-template-areas: "side banner";
-}
-
-#come_see_text {
-    margin: 0;
+.subtitleSize{
+    text-shadow: 1px 1px 2px black;
     font-size: 65px;
     text-align: center;
+}
+.homeSectionLine{
     border: solid;
     border-image-slice: 1;
     border-width: 5px;
     border-image-source: linear-gradient(to left, #506971, #000000, #506971);
-    border-top: 0;
+    border-bottom: 0;
     border-left: 0;
     border-right: 0;
 }
 
 .upcoming_show_banner {
-    width: 800px;
-    border: solid #000000 5px;
-    border-radius: 50px;
-    margin: 0 25px 0 25px;
-    grid-area: banner;
+    width: 61%;
+    display: block;
+    border: solid #000000 3px;
+    border-radius: 15px;
+    margin: auto;
 }
 
-.upcoming_show_sidebar {
-    grid-area: side;
+.centerButton {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.twoColumn {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
+    flex-direction: row;
 }
 
-
+.boxPadding{
+    padding: 0 25px 0 25px;
+}
 
 a:link { text-decoration: none; color: #d0c2b6; }
 
@@ -187,9 +209,8 @@ a:active { text-decoration: none; color: #d0c2b6; }
     grid-template-rows: 325px 100px 100px;
     grid-template-areas:
         "workshopImage workshopTitle workshopTitle"
-        "workshopImage synopsis ."
+        "workshopImage synopsis synopsis"
         "workshopImage . button"
-    
 }
 
 .workshop_image {
@@ -201,14 +222,24 @@ a:active { text-decoration: none; color: #d0c2b6; }
 }
 
 .titleWorkshop {
+    text-shadow: 1px 1px 2px black;
     position: relative;
     margin: 35px 40px 750px auto;
     grid-area: workshopTitle;
 }
 
 .workshopSynopsis{
+    text-shadow: 1px 1px 2px black;
     color: #d0c2b6;
     grid-area: synopsis;
+}
+
+.partnerBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100px;
+    margin: 25px 0 25px 0;
 }
 
 .buttonSpacing {
@@ -216,13 +247,13 @@ a:active { text-decoration: none; color: #d0c2b6; }
     align-self: center;
     grid-area: button;
     margin: 0 45px 0 0;
-
 }
 
 .buttonFormat {
-    background-color: #d0c2b6;
+    background: linear-gradient(#72878d, #3b4d53);
+    box-shadow: 2px 2px 5px #111;    
     font-size: 25px;
-    border: solid;
+    border: solid 2px;
     border-radius: 25px;
     padding: 15px 45px 15px 45px;
 }
@@ -279,6 +310,7 @@ a:active { text-decoration: none; color: #d0c2b6; }
     text-align: center;
 }
 
+
 @media only screen and (max-width: 1000px) {
     .banner_text {
         font-size: 20px;
@@ -297,7 +329,9 @@ a:active { text-decoration: none; color: #d0c2b6; }
     .titleSize {
         font-size: 40px;
     }
-
+    .subtitleSize {
+        font-size: 40px;
+    }
     .title {
         display: flex;
         justify-content: right;
@@ -310,26 +344,18 @@ a:active { text-decoration: none; color: #d0c2b6; }
         margin: 0 40px 425px auto;
         grid-area: workshopTitle;
     }
-    #come_see {
+       .upcoming_show_banner {
+        width: 61%;
         display: block;
-        flex-direction: row;
-    }
-    .upcoming_show_banner {
-        width: 100%;
-        display: block;
+        text-align: center;
         border: solid #000000 2px;
-        border-radius: 50px;
-        margin: 0;
-    }
-    #come_see_text {
-        margin: 10px 0 10px 0;
-        font-size: 30px;
+        border-radius: 15px;
+        margin: auto;
     }
     .buttonFormat {
         font-size: 15px;
         border-radius: 5px;
         padding: 5px 20px 5px 20px;
-        margin: 10px 0 10px 0;
     }
     .workshopBoxSizing {
         font-size: 10px;
@@ -347,14 +373,29 @@ a:active { text-decoration: none; color: #d0c2b6; }
         width: 100%;
         display: grid;
         flex-direction: row;
-        grid-template-rows: 170px 75px 75px;
+        grid-template-rows: 170px 150px 75px;
         grid-template-areas:
             "workshopImage workshopTitle workshopTitle"
-            "workshopImage synopsis ."
+            "workshopImage synopsis synopsis"
             "workshopImage . button"
         
     }
-
+    .videoEmbed {
+        grid-area: videoEmbed;
+        min-width: 80%;
+        height: 350px;
+        margin: auto;
+    }
+    .projects_image {
+        height: 225px;
+        margin: 0 -25px 0 0;
+        grid-area: projPhoto;
+    }
+    .projectBanner {
+        height: 275px;
+    }
+    
+    
 }
 @media only screen and (max-width: 600px) {
     .banner_text {
@@ -372,7 +413,9 @@ a:active { text-decoration: none; color: #d0c2b6; }
     .titleSize {
         font-size: 30px;
     }
-
+    .subtitleSize {
+        font-size: 30px;
+    }
     .title {
         display: flex;
         justify-content: right;
@@ -386,10 +429,12 @@ a:active { text-decoration: none; color: #d0c2b6; }
         grid-area: workshopTitle;
     }
     .upcoming_show_banner {
-        max-width: 800px;
-        border: solid #000000 1px;
-        border-radius: 50px;
-        margin: 0 ;
+        width: 61%;
+        display: block;
+        text-align: center;
+        border: solid #000000 2px;
+        border-radius: 15px;
+        margin: auto;
     }
     .workshopMain {
         display: flex;
@@ -400,17 +445,54 @@ a:active { text-decoration: none; color: #d0c2b6; }
         width: 250px;
         height: 280px;
         object-position: 100% 0;
+        margin: 0 0 0 -75px;
     }
     .workshopBanner {
         height: 280px;
         width: 100%;
         display: grid;
         flex-direction: row;
-        grid-template-rows: 113px 50px 50px;
+        grid-template-rows: 113px 100px 50px;
         grid-template-areas:
             "workshopImage workshopTitle workshopTitle"
-            "workshopImage synopsis ."
+            "workshopImage synopsis synopsis"
             "workshopImage . button"
         
     }
+    .workshopSynopsis{
+        font-size: 10px;
+    }
+    .twoColumn {
+        display: flex;
+        flex-direction: column;
+    }
+    .partnerBox {
+        height: 65px;
+        margin: 15px 0 15px 0;
+    }
+    .videoEmbed {
+        grid-area: videoEmbed;
+        min-width: 80%;
+        height: 250px;
+        margin: auto;
+    }
+    .projectOne {
+        display: grid;
+        grid-template-rows: 125px auto auto auto;
+        grid-template-areas:
+            "maskTitle maskTitle"
+            "maskBody maskBody"
+            "maskBody maskBody"
+            "maskBottom maskTop";
+    }
+    .projects_image {
+        height: 175px;
+        margin: 0 -25px 0 0;
+        grid-area: projPhoto;
+    }
+    .projectBanner {
+        height: 175px;
+    }
+
 }
+
