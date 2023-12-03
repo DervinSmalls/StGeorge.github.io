@@ -180,12 +180,11 @@ a:active { text-decoration: none; color: #d0c2b6; }
 
 
 .workshopBanner {
-    background-color: #000000;
     height: 575px;
     width: 100%;
     display: grid;
     flex-direction: row;
-    grid-template-rows: 225px 150px 150px;
+    grid-template-rows: 325px 100px 100px;
     grid-template-areas:
         "workshopImage workshopTitle workshopTitle"
         "workshopImage synopsis ."
@@ -338,6 +337,23 @@ a:active { text-decoration: none; color: #d0c2b6; }
     .workshopHeader {
         font: 15px;
     }
+    .workshop_image {
+        width: 375px;
+        height: 430px;
+        object-position: 100% 0;
+    }
+    .workshopBanner {
+        height: 430px;
+        width: 100%;
+        display: grid;
+        flex-direction: row;
+        grid-template-rows: 170px 75px 75px;
+        grid-template-areas:
+            "workshopImage workshopTitle workshopTitle"
+            "workshopImage synopsis ."
+            "workshopImage . button"
+        
+    }
 
 }
 @media only screen and (max-width: 600px) {
@@ -376,15 +392,25 @@ a:active { text-decoration: none; color: #d0c2b6; }
         margin: 0 ;
     }
     .workshopMain {
-        display: grid;
-        grid-gap: 30px;
-        grid-template-areas:
-            "firstD" "secondD "
-            "thirdD" "fourthD "
-            "."
-        grid-template-rows: auto auto;
-        justify-content: space-between;
-        justify-items: center;
-        align-items: top;
+        display: flex;
+       flex-direction: column;
+
     }  
+    .workshop_image {
+        width: 250px;
+        height: 280px;
+        object-position: 100% 0;
+    }
+    .workshopBanner {
+        height: 280px;
+        width: 100%;
+        display: grid;
+        flex-direction: row;
+        grid-template-rows: 113px 50px 50px;
+        grid-template-areas:
+            "workshopImage workshopTitle workshopTitle"
+            "workshopImage synopsis ."
+            "workshopImage . button"
+        
+    }
 }
