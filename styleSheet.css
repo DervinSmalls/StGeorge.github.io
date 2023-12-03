@@ -238,7 +238,7 @@ a:active { text-decoration: none; color: #d0c2b6; }
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    height: 100px;
+    height: 150px;
     margin: 25px 0 25px 0;
 }
 
@@ -344,7 +344,7 @@ a:active { text-decoration: none; color: #d0c2b6; }
         margin: 0 40px 425px auto;
         grid-area: workshopTitle;
     }
-       .upcoming_show_banner {
+    .upcoming_show_banner {
         width: 61%;
         display: block;
         text-align: center;
@@ -362,6 +362,10 @@ a:active { text-decoration: none; color: #d0c2b6; }
     }
     .workshopHeader {
         font: 15px;
+    }
+    .partnerBox {
+        height: 100px;
+        margin: 15px 0 15px 0;
     }
     .workshop_image {
         width: 375px;
@@ -467,7 +471,7 @@ a:active { text-decoration: none; color: #d0c2b6; }
         flex-direction: column;
     }
     .partnerBox {
-        height: 65px;
+        height: 85px;
         margin: 15px 0 15px 0;
     }
     .videoEmbed {
@@ -486,9 +490,10 @@ a:active { text-decoration: none; color: #d0c2b6; }
             "maskBottom maskTop";
     }
     .projects_image {
-        height: 175px;
-        margin: 0 -25px 0 0;
-        grid-area: projPhoto;
+        display: block;
+        height: 150px;
+        margin: auto;
+        z-index: 1;
     }
     .projectBanner {
         height: 175px;
